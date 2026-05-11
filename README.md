@@ -70,7 +70,6 @@ No GUI. No database. No bloat. Just a terminal, `fzf`, `tmux`, and your keys.
 git clone https://codeberg.org/lazysysadmin/juwassh.git
 cd juwassh
 cp config.toml.example config.toml
-# Edit hosts.toml with your servers
 chmod +x juwassh.sh
 ./juwassh.sh
 ```

@@ -6,10 +6,10 @@ default_user = "saperlipopette"
 default_port = 22
 default_key = "~/.ssh/id_ed25519"
 terminal_color = "default"
+read_ssh_config = true
 
 # Display option in the menu (true = labiscotte@10.11.12.13 / false = 10.11.12.13)
-#show_user = false
-show_user = true
+show_user = false
 
 
 # ==========================================
