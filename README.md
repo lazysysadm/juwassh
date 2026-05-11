@@ -92,6 +92,7 @@ color = "green"
   user = "admin"
   port = 22
   key  = "~/.ssh/id_ed25519"
+  password_fallback = true
 
   [groups.homelab.servers.nas]
   host = "192.168.1.77"
