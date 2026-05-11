@@ -1,0 +1,43 @@
+# ==========================================
+# 1. GENERAL PARAMS
+# ==========================================
+[settings]
+default_user = "saperlipopette"
+default_port = 22
+default_key = "~/.ssh/id_ed25519"
+terminal_color = "default"
+
+# Display option in the menu (true = labiscotte@10.11.12.13 / false = 10.11.12.13)
+#show_user = false
+show_user = true
+
+
+# ==========================================
+# 1. HOSTS
+# ==========================================
+
+
+[groups.homelab]
+label = "Home Lab"
+color = "green"
+
+  [groups.homelab.servers.proxmox]
+  host = "192.168.1.99"
+  user = "admin"
+  port = 22
+  key  = "~/.ssh/id_ed25519"
+  password_fallback = true
+
+  [groups.homelab.servers.nas]
+  host = "192.168.1.77"
+
+[groups.vps]
+label = "VPS"
+color = "blue"
+
+  [groups.vps.servers.web01]
+  host = "203.0.113.42"
+  user = "deploy"
+  port = 2222
+  key  = "~/.ssh/vps_key"
+  password_fallback = true
