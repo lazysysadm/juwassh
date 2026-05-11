@@ -31,9 +31,8 @@ No GUI. No database. No bloat. Just a terminal, `fzf`, `tmux`, and your keys.
 - 🎨 Per-server **terminal color** theming inside tmux
 - 💡 Runs entirely inside a **tmux session** with mouse support - Feel free to change the tmux config on your own.
 
-![Juwassh demo](assets/juwassh.gif)
-![Juwassh demo](assets/juwassh2.gif)
-
+![Juwassh demo](assets/juwassh.png)
+![Juwassh demo](assets/juwassh2.png)
 
 ---
 
