@@ -1,7 +1,7 @@
 # ☀️ Juwassh — Simple SSH Connection Manager
-# Juwassh -  🇫🇷
+# Juwassh - Fr0m 🇫🇷
 
-> **JUWA** means **SUN** in Swahili — and with this tool, your SSH workflow should be all sunshine.  
+> **JUWA** means **SUN** Swahili/Ki-Shikomori(🇰🇲☀️) — and with this tool, your SSH workflow should be all sunshine.  
 > **HAKUNA MATATA** with your shell and SSH connections 😄
 
 ---
@@ -74,7 +74,7 @@ chmod +x juwassh.sh
 
 ---
 
-## ⚙️ Configuration — `hosts.toml`
+## ⚙️ Configuration — `config.toml`
 
 ```toml
 [settings]
