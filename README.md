@@ -1,4 +1,5 @@
 # ☀️ Juwassh — Simple SSH Connection Manager
+# Juwassh -  🇫🇷
 
 > **JUWA** means **SUN** in Swahili — and with this tool, your SSH workflow should be all sunshine.  
 > **HAKUNA MATATA** with your shell and SSH connections 😄
@@ -28,7 +29,7 @@ No GUI. No database. No bloat. Just a terminal, `fzf`, `tmux`, and your keys.
 - 📄 **Single TOML config file** — easy to read, edit, backup, and migrate
 - 🔌 **Auto-detects `~/.ssh/config`** entries and adds them to the list
 - 🎨 Per-server **terminal color** theming inside tmux
-- 💡 Runs entirely inside a **tmux session** with mouse support
+- 💡 Runs entirely inside a **tmux session** with mouse support - Feel free to change the tmux config on your own.
 
 ---
 
@@ -44,17 +45,28 @@ No GUI. No database. No bloat. Just a terminal, `fzf`, `tmux`, and your keys.
 | `ping` | Server reachability check |
 
 > On Debian/Ubuntu: `sudo apt install tmux fzf`  
-> On FEDORA/RHEL Familly : 'sudo dnf install tmux fzf'
+> On FEDORA/RHEL Familly : `sudo dnf install tmux fzf`
 > Python 3.11+ is required for the built-in `tomllib` module.
+
+## ⚠️ Compatibility
+
+| OS | Status | Notes |
+|----|--------|-------|
+| Linux (Debian, Ubuntu, Arch, Fedora…) | ✅ Fully supported | Bash 4.0+ required |
+| macOS | ⚠️ Not supported out of the box | macOS ships with Bash 3.2 — install Bash 5 via `brew install bash` |
+| WSL (Windows) | 🧪 Untested | Should work in theory |
+
+> Juwassh requires **Bash 4.0 or newer** due to the use of associative arrays (`declare -A`)  
+> and lowercase expansion (`${var,,}`). Check your version with `bash --version`.
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
-git clone https://codeberg.org/youruser/juwassh.git
+git clone https://codeberg.org/lazysysadmin/juwassh.git
 cd juwassh
-cp hosts.toml.example hosts.toml
+cp config.toml.example config.toml
 # Edit hosts.toml with your servers
 chmod +x juwassh.sh
 ./juwassh.sh
@@ -127,8 +139,8 @@ color = "blue"
 ```
 juwassh/
 ├── juwassh.sh          # Main script
-├── hosts.toml          # Your server list (ignored by git)
-├── hosts.toml.example  # Example config to get started
+├── config.toml          # Your config/server list (ignored by git)
+├── config.toml.example  # Example config to get started
 ├── LICENSE
 └── README.md
 ```
@@ -143,5 +155,5 @@ MIT — do whatever you want, just keep the credits. ☀️
 
 ## 🤝 Contributing
 
-Issues and pull requests are welcome on [Codeberg](https://codeberg.org/youruser/juwassh).  
+Issues and pull requests are welcome on [Codeberg](https://codeberg.org/lazysysadmin/juwassh.git).  
 If Juwassh saved you time, a ⭐ is always appreciated!
